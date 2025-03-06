@@ -47,6 +47,7 @@ def check_test(df, id_column='id', target='price'):
         if len(non_numeric) > 0:
             error_indices = non_numeric.index.tolist()
             errors.append(f"Non-numeric values found in price column at indices: {error_indices}")
+            print(df.head(5))
     
     # Check 3: ID values must be within specified range
     if id_column not in df.columns:
